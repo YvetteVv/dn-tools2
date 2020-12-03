@@ -22,10 +22,20 @@ class PersonReact extends React.Component {
   generateOccu = (c) => {
     let size = personList.length;
     let newArr = [];
-    for (let i = 0; i < c; i++) {
+    let count = 0;
+    let l = [];
+    while(count < c){
       let index = parseInt(Math.random() * (size));
-      newArr.push(personList[index]);
+      if(l.indexOf(index) === -1){
+        l.push(index);
+        newArr.push(personList[index]);
+        count ++;
+      }
     }
+    // for (let i = 0; i < c; i++) {
+    //   let index = parseInt(Math.random() * (size));
+    //
+    // }
     let group = [
       '第1组：'+ newArr[0] + '，'+ newArr[1],
       '第2组：'+ newArr[2] + '，'+  newArr[3],
