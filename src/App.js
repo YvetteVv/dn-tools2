@@ -21,7 +21,7 @@ class App extends Component {
                path="/group"
                component={routeProps => <Person {...routeProps} />}
            />
-           <Redirect to="/occupation"/>
+           <Redirect to="/group"/>
        </Switch>
 
      </Route>
