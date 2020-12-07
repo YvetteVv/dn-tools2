@@ -65,6 +65,7 @@ class PersonReact extends React.Component {
               <ul>
                 <li><a onClick={() => {this.props.history.push('/occupation');}}>职业生成器</a></li>
                 <li><a className="active" onClick={() => {this.props.history.push('/group');}}>随机抽签器</a></li>
+                <Footer style={{textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 言春花</Footer>
               </ul>
             </div>
             <Divider orientation="left">分组随机抽签器</Divider>
@@ -102,7 +103,7 @@ class PersonReact extends React.Component {
             <button className="btn" onClick={()=>{this.generateOccu(this.state.count, this.state.perGroup)}}>生成</button>
             </div>
             <Numbers arr={this.state.arr}/>
-            <Footer style={{ marginTop:'500px',textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 言卿</Footer>
+
           </div>
         </div>
     );

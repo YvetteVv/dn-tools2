@@ -16,7 +16,6 @@ class NumbersReact extends React.Component {
 		return (
 			<div className="container-flex">
 				{this.props.arr.map((item, index)=>{
-					console.log(index)
 					return <Number num={item} key={index}/>
 				})}
 			</div>
