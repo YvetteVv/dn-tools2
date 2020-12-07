@@ -15,43 +15,44 @@ class PersonReact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      arr:[]
+      arr:[],
+      count:0,
+      perGroup:0
     }
   }
 
-  generateOccu = (c) => {
-    let size = personList.length;
+  generateOccu = (size, perGroup) => {
     let newArr = [];
     let count = 0;
-    let l = [];
-    while(count < c){
-      let index = parseInt(Math.random() * (size));
-      if(l.indexOf(index) === -1){
-        l.push(index);
-        newArr.push(personList[index]);
+    let tmp = [];
+    while(count < size){
+      let random = parseInt(Math.random() * (size));
+      if(tmp.indexOf(random) === -1){
+        tmp.push(random);
+        newArr.push(random);
         count ++;
       }
     }
-    // for (let i = 0; i < c; i++) {
-    //   let index = parseInt(Math.random() * (size));
-    //
-    // }
-    let group = [
-      '第1组：'+ newArr[0] + '，'+ newArr[1],
-      '第2组：'+ newArr[2] + '，'+  newArr[3],
-      '第3组：'+ newArr[4] + '，'+  newArr[5],
-      '第4组：'+ newArr[6] + '，'+  newArr[7],
-      '第5组：'+ newArr[8] + '，'+  newArr[9],
-      '第6组：'+ newArr[10] + '，'+  newArr[11],
-      '第7组：'+ newArr[12] + '，'+  newArr[13],
-      '第8组：'+ newArr[14] + '，'+  newArr[15],
-      '第9组：'+ newArr[16] + '，'+  newArr[17],
-    ]
+    console.log(newArr)
+    let group = []
+    let i = 0
+    while(i < size){
+      let ele = []
+      for(let j = 0; j < perGroup; j++){
+        if(i+j < size){
+          ele.push(newArr[i+j] + 1)
+        }
+        else break
+      }
+      group.push(ele.sort())
+      i = i + parseInt(perGroup)
+    }
+
+    console.log(group)
     this.setState({
       arr:group
     })
   };
-
 
   render() {
     //console.log(this.state.checkedList)
@@ -79,10 +80,26 @@ class PersonReact extends React.Component {
               <Tag color="cyan">活动</Tag>
               {/*<Tag color="blue">blue</Tag>*/}
               {/*<Tag color="geekblue">geekblue</Tag>*/}
-              {/*<Tag color="purple">purple</Tag>*/}
+              <Tag color="purple">冰红活动</Tag>
             </div>
             <div className="wrapper">
-            <button className="btn" onClick={()=>{this.generateOccu(personList.length)}}>生成</button>
+              <div>请输入总人数</div>
+              <input
+                  type="text"
+                  className="form-control"
+                  placeholder="请输入"
+                  value={this.state.count}
+                  onChange={(e)=>{this.setState({count:e.target.value})}}
+              />
+              <div>请输入每组人数</div>
+              <input
+                  type="text"
+                  className="form-control"
+                  placeholder="请输入"
+                  value={this.state.perGroup}
+                  onChange={(e)=>{this.setState({perGroup:e.target.value})}}
+              />
+            <button className="btn" onClick={()=>{this.generateOccu(this.state.count, this.state.perGroup)}}>生成</button>
             </div>
             <Numbers arr={this.state.arr}/>
             <Footer style={{ marginTop:'500px',textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 言卿</Footer>

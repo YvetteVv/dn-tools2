@@ -13,7 +13,8 @@ class NumberReact extends React.Component {
 	render() {
 		return (
 			<div className="num-oneitem">
-				<Text num={this.props.num} />
+				{/*<div>第{this.props.key}组</div>*/}
+				<Text num={this.props.num} />,
 			</div>
 		)
 	}

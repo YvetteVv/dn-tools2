@@ -61,3 +61,9 @@
 	animation-fill-mode:forwards, forwards;
 	animation-direction:normal, alternate;
 }
+.flex{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}

@@ -12,12 +12,13 @@ class NumbersReact extends React.Component {
 		}
 	}
 	render() {
-		let arr = this.props.arr;
+		//let arr = this.props.arr;
 		return (
 			<div className="container-flex">
-				{arr.map((item, i) => {
-						return <Number num={item} key={i}/>
-					})}
+				{this.props.arr.map((item, index)=>{
+					console.log(index)
+					return <Number num={item} key={index}/>
+				})}
 			</div>
 		)
 	}
