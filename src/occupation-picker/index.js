@@ -33,6 +33,7 @@ class OccupationReact extends React.Component {
       let index = parseInt(Math.random() * (size));
       newArr.push(this.state.checkedList[index]);
     }
+    console.log(newArr)
     this.setState({
       arr:newArr
     })
@@ -65,19 +66,19 @@ class OccupationReact extends React.Component {
         <div className="cell-membrane">
           <div>
             <ul>
-              <li><a className="active" onClick={() => {this.props.history.push('/occupation');}}>职业生成器</a></li>
-              <li><a onClick={() => {this.props.history.push('/group');}}>随机抽签器</a></li>
-              <Footer style={{textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 言春花</Footer>
+              <li><a className="active" onClick={() => {this.props.history.push('/occupation');}}>职业转转乐</a></li>
+              <li><a onClick={() => {this.props.history.push('/group');}}>随机分组器</a></li>
+              <Footer style={{textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 花卷卷</Footer>
             </ul>
           </div>
-          <Divider orientation="left">随机职业生成器</Divider>
+          <Divider orientation="left">职业大转盘--幸运转转转</Divider>
 
           <div>
             <Tag color="magenta">DN</Tag>
             {/*<Tag color="lime">Destiny公会</Tag>*/}
             {/*<Tag color="volcano">活动</Tag>*/}
             {/*<Tag color="orange">orange</Tag>*/}
-            <Tag color="gold">Destiny公会</Tag>
+            <Tag color="gold">职业转转乐</Tag>
             {/*<Tag color="lime">lime</Tag>*/}
             {/*<Tag color="green">green</Tag>*/}
             <Tag color="cyan">活动</Tag>

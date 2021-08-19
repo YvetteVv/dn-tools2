@@ -63,9 +63,9 @@ class PersonReact extends React.Component {
           <div className="cell-membrane">
             <div>
               <ul>
-                <li><a onClick={() => {this.props.history.push('/occupation');}}>职业生成器</a></li>
-                <li><a className="active" onClick={() => {this.props.history.push('/group');}}>随机抽签器</a></li>
-                <Footer style={{textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 言春花</Footer>
+                <li><a onClick={() => {this.props.history.push('/occupation');}}>职业转转乐</a></li>
+                <li><a className="active" onClick={() => {this.props.history.push('/group');}}>随机分组器</a></li>
+                <Footer style={{textAlign: 'center',backgroundColor:'#e3f2fd'}}>DragonNest ©2020 Created by 花卷卷</Footer>
               </ul>
             </div>
             <Divider orientation="left">分组随机抽签器</Divider>
@@ -75,13 +75,13 @@ class PersonReact extends React.Component {
               {/*<Tag color="lime">Destiny公会</Tag>*/}
               {/*<Tag color="volcano">活动</Tag>*/}
               {/*<Tag color="orange">orange</Tag>*/}
-              <Tag color="gold">Destiny公会</Tag>
+              <Tag color="gold">分组转转乐</Tag>
               {/*<Tag color="lime">lime</Tag>*/}
               {/*<Tag color="green">green</Tag>*/}
               <Tag color="cyan">活动</Tag>
               {/*<Tag color="blue">blue</Tag>*/}
               {/*<Tag color="geekblue">geekblue</Tag>*/}
-              <Tag color="purple">冰红活动</Tag>
+              {/* <Tag color="purple">冰红活动</Tag> */}
             </div>
             <div className="wrapper">
               <div>请输入总人数</div>

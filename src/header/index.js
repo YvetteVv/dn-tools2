@@ -27,8 +27,8 @@ class HeaderReact extends React.Component {
     return (
         <div>
           <ul>
-            <li><a className="active">职业生成器</a></li>
-            <li><a >随机抽签器</a></li>
+            <li><a className="active">职业转转乐</a></li>
+            <li><a >随机分组器</a></li>
           </ul>
         </div>
     );
